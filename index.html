@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <title>JS Field Validator.</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    
+</head>
+
+<body>
+<div>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="">GharPar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo01"> -->
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item active">
+                   <a class="nav-link" href="">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="nav-link" href="">Products</a>
+                 </li>
+                 <li class="navbar-item">
+                    <a class="nav-link" href="">Contact Us</a>
+                 </li>
+            </ul>
+        </div>
+        </nav>
+</div>
+<div class="container-fluid">
+        <h2>Create an Account with us</h2>
+        <br>
+    <form>
+     <div class="form-group row">
+        <label for="fName"  class="col-sm-2 col-form-label">First Name</label>
+        <input type="text" id="fName" class="form-control-sm" placeholder="First Name">
+        <label id="fNameErr" class="labErr"></label>
+     </div>
+     <div class="form-group row">
+        <label for="lName"  class="col-sm-2 col-form-label">Last Name</label>
+        <input type="text" id="lName" class="form-control-sm" class="col-sm-2 col-form-label" placeholder="Last Name">
+        <label id="lNameErr" class="labErr"></label>
+    </div>
+    <div class="form-group row">
+        <label for="eMail"  class="col-sm-2 col-form-label">eMail</label>
+        <input type="email" id="eMail" class="form-control-sm" placeholder="Please enter your email">
+        <label id="eMailErr" class="labErr"></label>
+    </div>
+    <div class="form-group row">
+        <label for="mNumber"  class="col-sm-2 col-form-label">Mobile Number</label>
+        <input type="number" id="mNumber" class="form-control-sm" placeholder="Mobile:- +91 xxxx-xxxx">
+        <label id="mNumberErr" class="labErr"></label>
+    </div>
+    <div class="form-group row">
+        <label for="pWord"  class="col-sm-2 col-form-label">Password</label>
+        <input type="password" id="pWord" class="form-control-sm" placeholder="Password">
+        <label id="pWordErr" class="labErr"></label>
+    </div>
+    <div class="form-group row">
+        <label for="frmfld"  class="col-sm-2 col-form-label">Gender</label>
+        <select id="frmfld" class="form-control-sm"  id="selectGender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <label id="labErr"></label>
+    </div>
+    <div class="form-group row">
+    <div class="col-sm">
+        <button type="button" class="btn btn-primary" onclick='err()'>Submit</button>
+        <button type="button" class="btn btn-primary" onClick="window.location.reload();">Refresh Page</button>
+    </div>
+    </div>
+    </div>
+    </form>
+    <!-- <div class="text-center">
+        <img src="food.PNG" class="rounded" width="300px" height="200px">
+    </div> -->
+</div>
+    
+    <footer>
+        <center>
+            Copyright 1999-2021 by faceMart. All Rights Reserved. <br>
+            <img src="fb.png" alt="" width="25px" height="25px">
+            <img src="insta.png" alt="" width="25px" height="25px">
+            <img src="lkin.png" alt="" width="25px" height="25px">
+            <img src="twiter.png" alt="" width="25px" height="25px">
+        </center>
+    </footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+
+</html>
