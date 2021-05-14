@@ -1,62 +1,29 @@
-function setWerr() {
-    if (document.getElementById("fName").value == "") {
-        document.getElementById("fNameErr").innerHTML = "*required field";
-    }else{
-    var fNameCoki=document.wCookies.fName.value + "; max-age="+60*60*24*10;
-    console.log(fNameCoki);
-    document.cookie="Firstname="+fNameCoki;
-    }
+// navbar motion
+document.querySelector('.menu').addEventListener('click',()=>{
+    document.querySelectorAll('.target').forEach((item)=>{
+        item.classList.toggle('change')
+    })
+})
 
-    if (document.getElementById("lName").value == "") {
-        document.getElementById("lNameErr").innerHTML = "*required field";
-    }else{
-        var lNameCoki=document.wCookies.lName.value + "; max-age="+60*60*24*10;
-        console.log(lNameCoki);
-        document.cookie="lastname="+lNameCoki;
-    }
 
-    if (document.getElementById("eMail").value == "") {
-        document.getElementById("eMailErr").innerHTML = "*required field";
-    }else{
-        var eMailCoki=document.wCookies.eMail.value + "; max-age="+60*60*24*10;
-        console.log(eMailCoki);
-        document.cookie="eMail="+eMailCoki;
-    }
 
-    if (document.getElementById("mNumber").value == "") {
-        document.getElementById("mNumberErr").innerHTML = "*required field";
-    }else{
-        var mNumberCoki=document.wCookies.mNumber.value + "; max-age="+60*60*24*10;
-        console.log(mNumberCoki);
-        document.cookie="MobileNumber="+mNumberCoki;
-    }
+// Create variable to store icons
+const icons=document.querySelectorAll('.section-1-icons i');
 
-    if (document.getElementById("pWord").value == "") {
-        document.getElementById("pWordErr").innerHTML = "*required field";
+// inbuilt function set interval
+let i=1;
+setInterval(()=>{
+    i++
+    const icon=document.querySelector('.section-1-icons .change');
+    icon.classList.remove('change');
+    
+    if(i>icons.length)
+    {
+        icons[0].classList.add('change')
+        
     }else{
-        var pWordCoki=document.wCookies.pWord.value + "; max-age="+60*60*24*10;
-        console.log(pWordCoki);
-        document.cookie="Password="+pWordCoki;
+        icon.nextElementSibling.classList.add('change')
     }
-}
+    
 
-function getCoki(){
-    var cokiRaw=document.cookie.split(";");
-    console.log(cokiRaw);
-    for(let i=0;i<cokiRaw.length;i++){
-        var cokiSort=cokiRaw[i].split("=");
-        console.log(cokiSort);
-        if (cokiSort[0].trim()=="Firstname"){
-            document.wCookies.fName.value=cokiSort[1];
-        }
-        if (cokiSort[0].trim()=="lastname"){
-            document.wCookies.lName.value=cokiSort[1];
-        }
-        if (cokiSort[0].trim()=="eMail"){
-            document.wCookies.eMail.value=cokiSort[1];
-        }
-        if (cokiSort[0].trim()=="MobileNumber"){
-            document.wCookies.mNumber.value=cokiSort[1];
-        }
-    }
-}
+},2000)
